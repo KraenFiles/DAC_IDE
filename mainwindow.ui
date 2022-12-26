@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>982</width>
+    <height>655</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../build-IDE-Desktop_Qt_5_15_2_MinGW_64_bit-Debug/icon.png</normaloff>../build-IDE-Desktop_Qt_5_15_2_MinGW_64_bit-Debug/icon.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QSplitter" name="CodeConsoleSlitter">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <widget class="QSplitter" name="codeFilesSlitter">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="opaqueResize">
+        <bool>true</bool>
+       </property>
+       <widget class="QWidget" name="horizontalLayoutWidget_2">
+        <layout class="QVBoxLayout" name="filesBlock">
+         <property name="sizeConstraint">
+          <enum>QLayout::SetMinimumSize</enum>
+         </property>
+         <item>
+          <layout class="QHBoxLayout" name="buttonsBlock">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QPushButton" name="updateFilesTree">
+             <property name="text">
+              <string>Обновить</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>../build-IDE-Desktop_Qt_5_15_0_MinGW_64_bit-Debug/reload.png</normaloff>../build-IDE-Desktop_Qt_5_15_0_MinGW_64_bit-Debug/reload.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>20</width>
+               <height>20</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="startButton">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Пуск</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>../build-IDE-Desktop_Qt_5_15_0_MinGW_64_bit-Debug/arrow.png</normaloff>../build-IDE-Desktop_Qt_5_15_0_MinGW_64_bit-Debug/arrow.png</iconset>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="buildButton">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Сборка</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>../build-IDE-Desktop_Qt_5_15_0_MinGW_64_bit-Debug/hammer.png</normaloff>../build-IDE-Desktop_Qt_5_15_0_MinGW_64_bit-Debug/hammer.png</iconset>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QTreeWidget" name="treeProjectFiles">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>200</width>
+             <height>200</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>1920</width>
+             <height>1024</height>
+            </size>
+           </property>
+           <property name="baseSize">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Trebuchet MS</family>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>16</width>
+             <height>16</height>
+            </size>
+           </property>
+           <property name="columnCount">
+            <number>1</number>
+           </property>
+           <attribute name="headerVisible">
+            <bool>false</bool>
+           </attribute>
+           <column>
+            <property name="text">
+             <string notr="true">1</string>
+            </property>
+           </column>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="horizontalLayoutWidget">
+        <layout class="QHBoxLayout" name="codeBlock">
+         <property name="sizeConstraint">
+          <enum>QLayout::SetDefaultConstraint</enum>
+         </property>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="layoutWidget">
+       <layout class="QVBoxLayout" name="consolBlock">
+        <property name="sizeConstraint">
+         <enum>QLayout::SetNoConstraint</enum>
+        </property>
+        <item>
+         <widget class="QTextEdit" name="consolOutput">
+          <property name="font">
+           <font>
+            <family>Trebuchet MS</family>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>982</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="file">
+    <property name="title">
+     <string>Файл</string>
+    </property>
+    <addaction name="creationFile"/>
+    <addaction name="creationClass"/>
+    <addaction name="separator"/>
+    <addaction name="save"/>
+    <addaction name="saveAs"/>
+    <addaction name="saveAll"/>
+    <addaction name="separator"/>
+    <addaction name="createNewProj"/>
+    <addaction name="openProj"/>
+   </widget>
+   <widget class="QMenu" name="edit">
+    <property name="title">
+     <string>Правка</string>
+    </property>
+    <addaction name="cancel"/>
+    <addaction name="repeat"/>
+    <addaction name="separator"/>
+    <addaction name="carve"/>
+    <addaction name="copy"/>
+    <addaction name="embed"/>
+    <addaction name="separator"/>
+    <addaction name="highlightAll"/>
+   </widget>
+   <widget class="QMenu" name="window">
+    <property name="title">
+     <string>Окно</string>
+    </property>
+    <addaction name="fullscrean"/>
+    <addaction name="separator"/>
+    <addaction name="settingsWindow"/>
+   </widget>
+   <widget class="QMenu" name="buildMenu">
+    <property name="title">
+     <string>Сборка</string>
+    </property>
+    <addaction name="run"/>
+    <addaction name="build"/>
+    <addaction name="separator"/>
+    <addaction name="settingsDocker"/>
+   </widget>
+   <addaction name="file"/>
+   <addaction name="edit"/>
+   <addaction name="window"/>
+   <addaction name="buildMenu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="creationFile">
+   <property name="text">
+    <string>Создать файл</string>
+   </property>
+  </action>
+  <action name="creationClass">
+   <property name="text">
+    <string>Создать класс C++</string>
+   </property>
+  </action>
+  <action name="save">
+   <property name="text">
+    <string>Сохранить</string>
+   </property>
+  </action>
+  <action name="saveAs">
+   <property name="text">
+    <string>Сохранить как...</string>
+   </property>
+  </action>
+  <action name="saveAll">
+   <property name="text">
+    <string>Сохранить всё</string>
+   </property>
+  </action>
+  <action name="cancel">
+   <property name="text">
+    <string>Отменить действие</string>
+   </property>
+  </action>
+  <action name="repeat">
+   <property name="text">
+    <string>Повторить действие</string>
+   </property>
+  </action>
+  <action name="carve">
+   <property name="text">
+    <string>Вырезать</string>
+   </property>
+  </action>
+  <action name="copy">
+   <property name="text">
+    <string>Копировать</string>
+   </property>
+  </action>
+  <action name="embed">
+   <property name="text">
+    <string>Вставить</string>
+   </property>
+  </action>
+  <action name="highlightAll">
+   <property name="text">
+    <string>Выделить все</string>
+   </property>
+  </action>
+  <action name="fullscrean">
+   <property name="text">
+    <string>Полноэкранный режим</string>
+   </property>
+  </action>
+  <action name="settingsWindow">
+   <property name="text">
+    <string>Настройки окна</string>
+   </property>
+  </action>
+  <action name="createNewProj">
+   <property name="text">
+    <string>Создать новый проект</string>
+   </property>
+  </action>
+  <action name="openProj">
+   <property name="text">
+    <string>Загрузить проект</string>
+   </property>
+  </action>
+  <action name="run">
+   <property name="text">
+    <string>Пуск</string>
+   </property>
+  </action>
+  <action name="build">
+   <property name="text">
+    <string>Сборка</string>
+   </property>
+  </action>
+  <action name="settingsDocker">
+   <property name="text">
+    <string>Настройка Docker</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
